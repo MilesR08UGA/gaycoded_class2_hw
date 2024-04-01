@@ -45,5 +45,18 @@ The average temperature of the data set:
 mean(early_january_weather$temp)
 ```
 
+## Plot of data
+
+Scatterplot of temp (y) vs time_hour (x): 
+
+```{r}
+data(early_january_weather)
+ggplot(data = early_january_weather)+                   
+  geom_point(                             
+    mapping = aes(x = time_hour, y = temp),    
+    color = "red")
+
+# The data shows a general increase in the temperature throughout the month. Incremental increases followed by decreases can be observed on a daily basis. 
+```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
